@@ -60,10 +60,45 @@ main>p{
 }
 
 
+/*css para o terminal*/
+.terminal{
+    border: solid white 5px;
+    padding-bottom: 20px;
+}
+#barra{
+    width: 1010px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    text-align: right;
+}
+#barra>p{
+    color: black;
+    font-size: 26px;
+    font-weight: 600;
+    margin-right: 10px;
+    display: inline-block;
+}
 
+/*css para o efeito de piscar classe: blink*/
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
 
+    50% {
+        opacity: 1;
+    }
 
+    100% {
+        opacity: 0;
+    }
+}
+.blink{
+    animation: animate 
+        1s linear infinite;
+}
 
+/*css para o efeito de glitch*/
 .glitch {
     position: relative;
     color: rgb(255, 0, 0);
