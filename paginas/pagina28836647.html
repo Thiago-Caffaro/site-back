@@ -6,33 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>...</title>
     <link rel="stylesheet" href="../index.css">
+    <link rel="shortcut icon" href="camera.ico" type="image/x-icon">
     <style>
         main>p{
             text-align: left;
         }
 
-        img{
+        .imagem>img{
+            width: 350px;
+            height: 300px;
+            transition: 0.5s;
+        }
+        .imagem>img:hover{
             box-shadow: rgb(148, 36, 36) 0px 0px 100px;
-            width: 400px;
-            margin-top: 50px;
+        }
+        .imagem{
+            margin-top: 70px;
         }
         audio{
             width: 100px;
             border-radius: 0px;
         }
+
     </style>
-    <audio autoplay>
-        <source src="../musicas/morse.mp3" type="audio/mpeg">
+    <audio>
+        <source src="../musicas/quebra.mp3" type="audio/mpeg">
         Your browser does not support this audio format.
     </audio>
-    
 </head>
 <body>
     <main>
-        <p>O seu desejo de me ajudar é realmente forte</p>
-        <p>Mas entenda, você está entrando em um buraco muito pior do que está pensando<br>Espere, ele está ali, acho que posso tirar uma foto dele sem ser percebido</p>
-        <h1>Droga ele me escu<span class="blink">|</span></h1>
-        <img src="../imagens/monstro.png">
+        <h1>Terminal</h1>
+        <p>FINALMENTE! Conseguir fazer um contato, você aí, está conseguindo ler isso? Está me ouvindo? Provavelmente esse microfone velho não funciona, droga.<br>
+            Achava que esse local era seguro, mas parece que tem algo aqui, fiquei aqui por tantos anos e nada nunca aconteceu, mas acho que essa não é uma zona segura mais, 
+            essa parece ser uma deixa para eu me retirar, talvez se eu pudesse pelo menos tirar uma última foto dessa coisa, assim você que estiver lendo essa mensagem pode o reconhecer, 
+            vai que alguém realmente venha me salvar no final das contas...<br>Parece que ele está por perto, é melhor eu<span class="blink">|</span>
+        </p>
+        <div class="imagem">
+            <img src="../imagens/monstro.png">
+            <p>Nome:<br>Autor: Franklin Murray<br>Data: XX/XX/2017</p>
+        </div>
     </main>
+    <div id="barra" style="width:1024px;"><p>x</p></div>
+    <main class="terminal" style="text-align: left; padding: 7px;">
+        <p style="display: inline-block; width: 800px;">
+            C:\Users\System>Sistema-> Atualização de estado de funções do sistema:<br><br>Video: Funcionando apropiadamente<br><br>
+            Teclado> Funcionando apropiadamente<br><br>Microfone: <span class="status">Indisponível, tentar conexão novamente?</span> <button class="btn btn-primary" onclick='$.playSound("../musicas/quebra.mp3")'>
+            <input type="button" value="Conectar"></button><br><br>Mouse: Funcionando apropiadamente<br><br>Conexão: oiadnando apFuenrnciamopte<br><br>
+            Taxa de Upload: 1kbyte/12h<br><br>Data Atual:<div id="data"></p>
+    </main>
+    <div class="data_c">Data do primeiro upload: XX/XX/2012</div>
 </body>
+<script>
+
+    const button = document.querySelector('input');
+    const mouse = document.querySelector('.status');
+
+    button.addEventListener('click', updateButton);
+
+    function updateButton() {
+    if (button.value === 'Conectar') {
+        button.value = 'Sim';
+        mouse.textContent = 'Conexão perdida, tentar novamente?';
+    } if (mouse.textContent === 'Conexão perdida, tentar novamente?'){
+        button.value = '.';
+        mouse.textContent = 'Funcionando apropiadamente';
+    }
+    
+    }
+
+
+    
+    date = new Date();
+    year = date.getFullYear();
+    month = date.getMonth() + 1;
+    day = date.getDate();
+    document.getElementById("data").innerHTML = day + "/" + month + "/" + year;
+</script>
+<script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+<script src='https://cdn.rawgit.com/admsev/jquery-play-sound/master/jquery.playSound.js'></script>
+<script>
+    setTimeout(function() {
+        window.location.href = "bemvindoaoinferno222.html";
+    }, 5000);
+</script>
 </html>

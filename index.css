@@ -58,6 +58,7 @@ main>p{
     transition: all 0.3s;
     position:relative;
 }
+/*css para a div separador*/
 
 /*css para o span "aleatorio"*/
 #aleatorio{
@@ -72,6 +73,10 @@ main>p{
     top: 0;
     left: 0;
     content: "XX";
+}
+/*css para a data*/
+.data{
+    display: inline-block;
 }
 
 /*css para o terminal*/
